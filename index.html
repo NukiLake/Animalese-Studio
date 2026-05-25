@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Animalese Studio</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="renderer.js"></script>
+    </head>
+    
+    <body>
+        <div class="topbar">
+            <div class="topbar-nav">
+                <button class="topbar-link">File</button>
+                <button class="topbar-link">Edit</button>
+                <button class="topbar-link">View</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="column" style="flex:2">
+                <div class="fixed-panel" style="flex-grow:0; flex-shrink: 0">
+                    <div class="panel-header">
+                        <img src="assets/soundbyte.png" class="img-small">
+                        <div>AUDIO SOURCES</div>
+                    </div>
+                    <p class="explanation-text">Import audio files that will be used to generate animalese</p>
+                    <div class="dropzone">
+                        <input id="fileInput" type="file" multiple hidden>
+                        <img src="assets/folder.png" alt="folder icon"/>
+                        <p>Drag & drop audio files here or click below to import</p>
+                    </div>
+                    <button class="import-button" onclick="document.getElementById('fileInput').click()">
+                        <img src="assets/plus.png" class="img-xsmall" alt="plus icon">
+                        <div>IMPORT FILES</div>
+                    </button>
+                    <div class="file-container">
+                        <div class="file-listing selected">
+                            <div>
+                                <button><img src="assets/play.png" class="play-icon"/></button>
+                                <div>TEST</div>
+                            </div>
+                            <div>
+                                <div>0:01.23</div>
+                                <button><img src="assets/delete.png"/></button>
+                            </div>
+                        </div>
+                        <div class="file-listing">
+                            <div>
+                                <button><img src="assets/play.png" class="play-icon"/></button>
+                                <div>cat_meow_1.wav</div>
+                            </div>
+                            <div>
+                                <div>0:01.23</div>
+                                <button><img src="assets/delete.png"/></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="panel-header">
+                        <div>PREVIEW SOURCE</div>
+                    </div>
+                    <div style="display:flex; justify-content:space-between">
+                        <div>cat_meow.wav</div>
+                        <div>0:00.25 / 0:01.23</div>
+                    </div>
+                </div>
+            </div>
+            <div class="column" style="flex:3">
+                <div class="panel">
+                    <div class="panel-header">
+                        <img src="assets/chatbubble.png" class="img-small" alt="chat bubble icon">
+                        <div>TEXT PROMPT</div>
+                    </div>
+                    <p>Enter the text you want to convert to animalese</p>
+                    <label>
+                        <textarea class="text-prompt">Hello there! What are you doing today?</textarea>
+                    </label>
+                    <div style="text-align: right">62/2000</div>
+                </div>
+                <div class="panel">
+                    <div class="panel-header">
+                        <img src="assets/chatbubble.png" class="img-small" alt="levels icon">
+                        <div>VOICE SETTINGS</div>
+                    </div>
+                    <div class="voice-sliders">
+                        <div class="slider-container">
+                            <div class="slider-top">
+                                <label for="pitch">Pitch</label>
+                                <div class="slider-value" id="pitch-value">1.00x</div>
+                            </div>
+                            <input class="custom-slider" type="range" id="pitch" name="pitch" min="0.5" max="2" value="1" step="0.01">
+                            <div class="slider-bottom">
+                                <div>0.5x</div>
+                                <div>1.0x</div>
+                                <div>2.0x</div>
+                            </div>
+                        </div>
+                        <div class="slider-container">
+                            <label for="speed">Speed</label>
+                            <input class="custom-slider" type="range" id="speed" name="speed" min="0.5" max="2" value="1" step="0.01">
+                            <div class="slider-bottom">
+                                <div>0.5x</div>
+                                <div>1.0x</div>
+                                <div>2.0x</div>
+                            </div>
+                        </div>
+                        <div class="slider-container">
+                            <label for="randomness">Randomness</label>
+                            <input class="custom-slider" type="range" id="randomness" name="randomness" min="0" max="1" value="0" step="0.01">
+                            <div class="slider-bottom">
+                                <div>0.0x</div>
+                                <div>0.5x</div>
+                                <div>1.0x</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-container">
+                        <div>Voice Profile</div>
+                        <div class="profile-controls">
+                            <div>
+                                <select class="profile-dropdown">
+                                    <option value="cat">Cat</option>
+                                    <option value="dog">Dog</option>
+                                    <option value="hamster">Hamster</option>
+                                </select>
+                                <button class="edit-profile-button">
+                                    <img src="assets/chatbubble.png" class="img-small" alt="edit icon">
+                                </button>
+                            </div>
+                            <button>
+                                <img src="assets/plus.png" class="img-small">
+                                <div>SAVE PRESET</div>
+                            </button>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+</html>
+
+<script src="script.js"></script>
+
+<script>
+    console.log("HI")
+</script>
