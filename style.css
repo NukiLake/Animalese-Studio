@@ -86,11 +86,9 @@ body::-webkit-scrollbar-thumb {
     -webkit-user-drag: none;
 }
 .img-small{
-    width:32px;
     height:32px;
 }
 .img-xsmall{
-    width:16px;
     height:16px;
 }
 
@@ -250,7 +248,7 @@ body::-webkit-scrollbar-thumb {
     display:flex;
     flex-direction:row;
     gap:12px;
-    padding:12px;
+    padding:8px;
 }
 .slider-container{
     flex-grow:1;
@@ -308,21 +306,75 @@ body::-webkit-scrollbar-thumb {
     -webkit-user-drag: none;
 }
 .profile-controls{
-    display:inline-flex;
+    display:flex;
     flex-direction:row;
     gap:8px;
     justify-content:space-between;
     width: 100%;
     padding:8px;
+    box-sizing:border-box;
 }
-.profile-controls *{
-    height:24px;
+.profile-controls button, .profile-controls select{
+    height:48px;
+}
+
+.profile-dropdown-container{
+    display:flex;
+    gap:8px;
 }
 .profile-dropdown{
     background: transparent;
     border: 1px solid #383C44;
     border-radius: 8px;
-
+    padding:0 8px;
     color: #cccccc;
     width: 200px;
+}
+.profile-dropdown option{
+    background: #1D222B;
+    color: #cccccc;
+}
+
+.save-profile-button{
+    background: #272C35;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    padding: 0px 12px;
+    cursor: pointer;
+    transition: background .12s, box-shadow .12s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:8px;
+    border:1px solid #383C44;
+}
+.save-profile-button img{
+    height: 24px;
+
+    user-select:none;
+    -webkit-user-drag: none;
+}
+
+
+
+.edit-profile-button{
+    background: #272C35;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    padding: 0px 12px;
+    cursor: pointer;
+    transition: background .12s, box-shadow .12s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border:1px solid #383C44;
+}
+.edit-profile-button img{
+    width: 24px;
+    height: 24px;
+
+    user-select:none;
+    -webkit-user-drag: none;
 }
